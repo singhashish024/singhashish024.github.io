@@ -1,0 +1,74 @@
+/* ---------------------FontFace "Lato"------------------------ */
+
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/8qcEw_nrk_5HEcCpYdJu8BTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/MDadn8DQ_3oT6kvnUq_2r_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* ---------------------about.html------------------------ */
+
+/* Create a Parallax Effect */
+.bgimg-2{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/battleram.JPG");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+
+/* ---------------------home.html------------------------ */
+
+/* Full height image header */
+.bgimg-4 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/mainPageImage.jpg");
+    min-height: 100vh;
+}
+.w3-navbar li a {
+    padding: 16px;
+    float: left;
+}
+
+/* ---------------------Animation------------------------ */
+
+main.ng-enter{
+  opacity:0;
+  transform: translateX(-100%);
+  transition: .5s ease-in all;
+}
+
+main.ng-enter-active{
+  transform: translateX(0);
+  opacity:1;
+}

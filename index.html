@@ -1,0 +1,50 @@
+<!doctype html>
+<html ng-app="PortfolioApp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Ashish Singh Portfolio">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ashish Singh</title>
+        <base href="/">
+        <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+        <link rel="stylesheet" href="assets/vendorCSS/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/customCSS/app.css">
+    </head>
+    <body ng-cloak>
+
+        <div ng-include="'dist/views/header.html'"></div>
+        
+        <!--main-->
+        <div class='container'>
+          <main ui-view></main>
+        </div>
+
+        <!--Angular-->
+        <script src="bower_components/angular/angular.min.js" ></script>
+		<script src="bower_components/angular-animate/angular-animate.min.js" ></script>
+		<script src="bower_components/angular-aria/angular-aria.min.js" ></script>
+        <script src="bower_components/angular-messages/angular-messages.min.js" ></script>
+
+        <!--UI-router-->
+        <script src="dist/vendorScripts/angular-ui-router.js"></script>
+        
+        <!--Angular Material-->
+		<script src="bower_components/angular-material/angular-material.min.js"></script>
+
+		<!--boot-->
+		<script src="dist/boot.js"></script>
+
+		<!--Modal-->
+
+		<!--services-->
+
+		<!--controllers-->
+        <script src="dist/controllers/headerControllerClass.js"></script>
+        <script src="dist/controllers/homeControllerClass.js"></script>
+        <script src="dist/controllers/aboutControllerClass.js"></script>
+        <script src="dist/controllers/blogControllerClass.js"></script>
+        <script src="dist/controllers/projectsControllerClass.js"></script>
+
+    </body>
+</html>
