@@ -1,0 +1,46 @@
+<!doctype html>
+<html ng-app="contactManager">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Contact Manager</title>
+        <link rel="stylesheet" href="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.css">
+        <link rel="stylesheet" href="./bower_components/angular-material-icons/angular-material-icons.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+        <link rel="stylesheet" href="./assets/customCSS/app.css">
+    </head>
+    <body layout="row" ng-cloak ng-controller="mainController as vm">
+        <div ng-include="'dist/views/sideNav.html'" layout="vertical"></div>
+
+        <div layout="column" flex id="wrapper">
+        	<div ng-include="'dist/views/toolbar-header.html'"></div> 
+        	<md-content id="content" flex>
+        		<div ng-include="'dist/views/main-content.html'"></div>
+                <md-tabs
+                    md-dynamic-height=""
+                    md-stretch-tabs="always" 
+                    md-selected="vm.tabIndex">
+                    <md-tab label="Bio">
+                      <div ng-include="'dist/views/tab-bio.html'"></div>
+                    </md-tab>
+                    <md-tab label="Notes">
+                      <div ng-include="'dist/views/tab-notes.html'"></div>
+                    </md-tab>
+                </md-tabs>
+        	</md-content>
+        </div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js" ></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js" ></script>
+		<script src="./bower_components/angular-aria/angular-aria.min.js" ></script>
+        <script src="./bower_components/angular-messages/angular-messages.min.js" ></script>
+		<script src="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.js"></script>
+		<script src="./bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+		<script src="./dist/modal.js"></script>
+		<script src="./dist/services/userService.js"></script>
+        <script src="./dist/controllers/addUserDialogController.js"></script>
+        <script src="./dist/controllers/controlPanelController.js"></script>
+		<script src="./dist/controllers/mainController.js"></script>
+		<script src="./dist/boot.js"></script>
+    </body>
+</html>
