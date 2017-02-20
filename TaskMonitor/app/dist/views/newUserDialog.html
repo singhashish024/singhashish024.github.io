@@ -1,0 +1,47 @@
+<md-dialog>
+	<form name="userForm" ng-submit="ctrl.save()">
+		<md-dialog-content>
+			<div layout="column" layout-padding>
+				<div layout-gt-sm="row">
+					<md-input-container class="md-block" flex-gt-sm>
+						<label>Avatar</label>
+						<md-select ng-model="ctrl.user.avatar" name="avatar" required>
+							<md-option ng-value="avatar" ng-repeat="avatar in ctrl.avatars">
+								<md-icon md-svg-icon="{{avatar}}"></md-icon>
+							</md-option>
+						</md-select>
+						<div ng-messages="userForm.avatar.$error">
+							<div ng-message="required">Please select an Avatar</div>
+						</div>
+					</md-input-container>
+					<md-input-container class="md-block" flex-gt-sm>
+						<label>First Name</label>
+						<input type="text" ng-model="ctrl.user.firstName" name="firstname" required>
+						<div ng-messages="userForm.firstname.$error">
+							<div ng-message="required">Please enter the First Name</div>
+						</div>
+					</md-input-container>
+					<md-input-container class="md-block" flex-gt-sm>
+						<label>Last Name</label>
+						<input type="text" ng-model="ctrl.user.lastName" name="lastname" required>
+						<div ng-messages="userForm.firstname.$error">
+							<div ng-message="required">Please enter the Last Name</div>
+						</div>
+					</md-input-container>
+				</div>
+				<md-input-container>
+					<label>Biography</label>
+					<textarea ng-model="ctrl.user.bio" rows="3" name="bio" required></textarea>
+					<div ng-messages="userForm.avatar.$error">
+						<div ng-message="required">Please enter the Biography details</div>
+					</div>
+				</md-input-container>
+			</div>
+	</md-dialog-content>
+
+	<md-dialog-actions layout="row">
+		<md-button ng-click="ctrl.cancel()">Cancel</md-button>
+		<md-button type="submit" class="md-primary md-raised" ng-disabled="userForm.$invalid">Save</md-button>
+	</md-dialog-actions>
+</form>
+</md-dialog>
